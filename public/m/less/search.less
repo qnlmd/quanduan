@@ -1,0 +1,76 @@
+@import './base.less';
+
+.ddff() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header{
+    .left{
+        .ddff();
+        a{
+            color: white;
+        }
+    }
+    .center{
+        h4{
+            font-weight: normal;
+        }
+    }
+}
+
+#main{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    .search-form{
+        padding: 10px;
+        form{
+            display: flex;
+            input{
+                flex: 1;
+                height: .34rem;
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+                text-align: left;
+                background-color: white;
+                border: .01rem solid @main-color;
+                font-size: .12rem;
+            }
+            button{
+                height: .34rem;
+                width: .6rem;
+                background-color: @main-color;
+                color: white;
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+            }
+        }
+    }
+    .search-content{
+        flex: 1;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        .mui-card-header{
+            height: .44rem;
+            span{
+                font-size: .14rem;
+            }
+            a{
+                color: #666;
+            }
+        }
+        .mui-card-content{
+            flex: 1;
+            .mui-scroll-wrapper{
+                // 没有高度 点不开
+                height: 100%;
+                position: relative;
+            }
+        }
+    }
+    
+}

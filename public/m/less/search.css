@@ -81,63 +81,59 @@ img {
   align-items: center;
 }
 #header .left a {
-  display: block;
   color: white;
 }
-#header .center > input {
-  margin-top: 5px;
-  background-color: #fff;
-  text-align: left;
-  font-size: .14rem;
+#header .center h4 {
+  font-weight: normal;
 }
 #main {
-  display: flex;
-  background-color: #cccccc;
-}
-#main .main-left {
-  width: 80px;
-}
-#main .main-left > div {
-  position: relative;
-  height: 100%;
-}
-#main .main-left > div > div ul li.active {
-  background-color: #cccccc;
-}
-#main .main-left > div > div ul li.mui-table-view-cell:after {
-  left: 0;
-}
-#main .main-left > div > div ul li a {
+  background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 45px;
 }
-#main .main-right {
-  flex: 1;
+#main .search-form {
   padding: 10px;
 }
-#main .main-right > div {
-  position: relative;
-  height: 100%;
+#main .search-form form {
+  display: flex;
 }
-#main .main-right > div > div .mui-row > div {
-  margin-bottom: 10px;
+#main .search-form form input {
+  flex: 1;
+  height: .34rem;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  text-align: left;
+  background-color: white;
+  border: 0.01rem solid #006699;
+  font-size: .12rem;
 }
-#main .main-right > div > div .mui-row > div a {
-  width: .9166rem;
-  height: .712rem;
+#main .search-form form button {
+  height: .34rem;
+  width: .6rem;
+  background-color: #006699;
+  color: white;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+#main .search-content {
+  flex: 1;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
 }
-#main .main-right > div > div .mui-row > div a img {
-  width: 100%;
+#main .search-content .mui-card-header {
+  height: .44rem;
 }
-#main .main-right > div > div .mui-row > div a p {
-  display: block;
+#main .search-content .mui-card-header span {
+  font-size: .14rem;
+}
+#main .search-content .mui-card-header a {
+  color: #666;
+}
+#main .search-content .mui-card-content {
+  flex: 1;
+}
+#main .search-content .mui-card-content .mui-scroll-wrapper {
+  height: 100%;
+  position: relative;
 }

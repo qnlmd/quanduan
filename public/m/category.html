@@ -24,7 +24,7 @@
             <input type="search" placeholder="请输入要搜索的商品">
         </div>
         <div class="right">
-            <a href="#" class="fa fa-search"></a>
+            <a href="search.html" class="fa fa-search"></a>
         </div>
     </header>
 
@@ -186,30 +186,6 @@
                                             <p>耐克</p>
                                         </a>
                                     </div>
-                                    <div class="mui-col-xs-4">
-                                        <a href="#">
-                                            <img src="/mobile/images/brand1.png" alt="">
-                                            <p>耐克</p>
-                                        </a>
-                                    </div>
-                                    <div class="mui-col-xs-4">
-                                        <a href="#">
-                                            <img src="/mobile/images/brand1.png" alt="">
-                                            <p>耐克</p>
-                                        </a>
-                                    </div>
-                                    <div class="mui-col-xs-4">
-                                        <a href="#">
-                                            <img src="/mobile/images/brand1.png" alt="">
-                                            <p>耐克</p>
-                                        </a>
-                                    </div>
-                                    <div class="mui-col-xs-4">
-                                        <a href="#">
-                                            <img src="/mobile/images/brand1.png" alt="">
-                                            <p>耐克</p>
-                                        </a>
-                                    </div>
                                 </div>
                         </div>
                     </div>
@@ -246,9 +222,40 @@
             </div>
         </div>
     </footer>
+    <!-- 左侧模块 -->
+    <script id="mainLeftTpl" type="text/html">
+        
+        {{each rows value index }}
+        <li class="mui-table-view-cell" data-id="{{value.id}}"><a href="#">{{value.categoryName}}</a></li>
+        {{/each}}
+    </script>
+
+    
+    <!-- 右侧模块 -->
+    <script id="mainRightTpl" type="text/html">
+        {{if rows.length>0}}
+        {{each rows value index}}
+        <div class="mui-col-xs-4">
+            <a href="#">
+                <img src="{{value.brandLogo}}" alt="">
+                <p>{{value.brandName}}</p>
+            </a>
+        </div>
+        {{/each}}
+        {{else}}
+        <p>暂时没由上架</p>
+        {{/if}}
+    </script>
+
+
+
 
 
     <script src="./lib/mui/js/mui.js"></script>
+    <!-- zepto 移动端的jq,用法一样 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 最新版的模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/category.js"></script>
 </body>
 
