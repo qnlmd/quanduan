@@ -1,0 +1,88 @@
+@import 'base.less';
+
+.ddff() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//头部区域
+#header {
+    .left {
+        .ddff();
+
+        a {
+            display: block;
+            color: white;
+        }
+    }
+
+    .center {
+        >input {
+            margin-top: 5px;
+            background-color: #fff;
+            text-align: left;
+            font-size: .14rem;
+        }
+    }
+}
+
+//主体内容
+#main {
+    display: flex;
+    background-color: #cccccc;
+    .main-left {
+        width: 80px;
+        >div{
+            position: relative;
+            height: 100%;
+            >div{
+                ul {
+                    li {
+                        &.mui-table-view-cell:after{
+                            left: 0;
+                            }   
+                        a {
+                            .ddff();
+                            width: 80px;
+                            height: 45px;
+                            }
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .main-right {
+        flex: 1;
+        padding: 10px;
+        >div{
+            position: relative;
+            height: 100%;
+            >div{
+                .mui-row {
+                    >div {
+                        margin-bottom: 10px;
+                        a {
+                            width: .9166rem;
+                            height: .712rem;
+                            .ddff();
+                            background-color: white;
+                            img {
+                                width: 100%;
+
+                            }
+        
+                            p {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

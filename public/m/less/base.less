@@ -1,0 +1,90 @@
+// 项目里面的页面很多重复样式 需要封装在公共文件里面
+// 1. 定义一些公共变量
+@main-color: #006699;
+
+// 2. 样式初始化 （不需要写那么多有MUI已经写了一些稍微加一点点）
+html {
+    font-size: 26.66667vw;
+}
+
+body {
+    font-size: .14rem;
+    line-height: .14rem;
+}
+
+// 去掉标题默认间距
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+//图片间隙
+img{
+    vertical-align: middle;
+}
+
+// 头部公共样式
+#header {
+    background-color: @main-color;
+    display: flex;
+    height: 45px;
+    .left {
+        height: .45rem;
+        width: .45rem;
+    }
+
+    .center {
+        flex: 1;
+        >h4 {
+            color: white;
+            height: 100%;
+            .ddff()
+        }
+    }
+
+    .right {
+        height: .45rem;
+        width: .45rem;
+        .ddff();
+        a{
+            color: white;
+        }
+    }
+}
+
+//中间内容公共样式
+#main{
+   flex: 1;
+   overflow: hidden;
+}
+
+//底部公共样式
+#footer{
+    background-color: @main-color;
+    height: 45px;
+    >div{
+        >div{
+            a{
+                .ddff();
+                color: white;
+                height: 45px;
+                i{
+                    display: block;
+                }
+                span{
+                    display: block;
+                }
+            }
+        }
+    } 
+}

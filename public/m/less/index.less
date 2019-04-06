@@ -1,0 +1,83 @@
+@import 'base.less';
+
+.ddff() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main{
+    // !!!应为滑动的插件有ab定位 所以要给父盒子加个定位
+    position: relative;
+    //导航栏区域
+    #nav{
+        padding: 10px;
+        >div{
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    //广告
+    #banner{
+        padding: 0px 10px;
+        >div{
+            >div{
+                >div{
+                    a{
+                        display: block;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .mui-col-xs-4{
+                a{
+                    display: block;
+                    img{
+                        height: 2.4175rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //品牌
+    #brand{
+        padding: 10px;
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    //运动
+    #sport{
+        .title{
+            padding: 0 10px;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .content{
+            padding: 4px;
+            div{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
