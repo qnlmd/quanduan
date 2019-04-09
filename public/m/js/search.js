@@ -3,6 +3,7 @@ $(function(){
     queryHistory();
     searchScroll();
     deleteHistory();
+    clearHistory();
 
     function searchScroll(){
         mui('.mui-scroll-wrapper').scroll({
@@ -45,6 +46,8 @@ $(function(){
             
             localStorage.setItem('searchNr',JSON.stringify(arr));
             queryHistory();
+            //跳转搜索页面  要拼接URL方式传递
+            location = '/m/productlist.html?search='+inputNr;
         })
     }
 
@@ -64,15 +67,41 @@ $(function(){
 
     //3.删除记录
     function deleteHistory(){
-        // var arr = localStorage.getItem('searchNr');
-        // if(arr == null){
-        //     arr =[]
-        // }else{
-        //     arr =JSON.parse(arr)
-        // }
-        $('.mui-card-content ul').on('tap','li',function(){
-            
-                 
+        var arr = localStorage.getItem('searchNr');
+        if(arr == null){
+            arr =[]
+        }else{
+            arr =JSON.parse(arr)
+        }
+        $('.mui-card-content ul').on('tap','span',function(){
+            var index = $(this).data('index');
+            arr.splice(index,1);
+            localStorage.setItem('searchNr',JSON.stringify(arr));
+            queryHistory(); 
         })
     }
+
+     //4.清空记录
+     function clearHistory(){
+        var arr = localStorage.getItem('searchNr');
+        if(arr == null){
+            arr =[]
+        }else{
+            arr =JSON.parse(arr)
+        }
+        $('.btn-clear').on('tap',function(){
+            localStorage.removeItem('searchNr');
+            queryHistory();
+        })
+    }
+
+
+    //点击添加
+    $('.mui-table-view-cell').on('tap',function(){
+        var seachNr= $(this).text();
+        $('#search-imp').val(seachNr)
+    })
 })
+
+
+   

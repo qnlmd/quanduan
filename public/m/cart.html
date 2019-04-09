@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- mui框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/cart.css">
+</head>
+
+<body>
+    <!-- 公共的头部 -->
+    <header id="header">
+        <div class="left">
+            <a href="index.html" class="fa fa-arrow-left"></a>
+        </div>
+        <div class="center">
+            <h4>购物中心</h4>
+        </div>
+        <div class="right">
+            <a href="index" class="fa fa-home"></a>
+        </div>
+    </header>
+
+    <!-- 主体部分 -->
+    <main id="main">
+        	<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--数据列表-->
+                    <!-- 图文列表 -->
+                    <ul class="mui-table-view listBox">
+                            <li class="mui-table-view-cell mui-media">
+                                <a href="javascript:;">
+                                    <!-- 左边 -->
+                                    <div class="mui-pull-left">
+                                        <img class="mui-media-object" src="/mobile/images/product.jpg">
+                                        <!-- 复选框 -->
+                                        <div class="mui-input-row mui-checkbox">
+                                            <input name="checkbox1" value="Item 1" type="checkbox">
+                                        </div>
+                                    </div>
+                
+                                    <!-- 右边 -->
+                                    <div class="mui-media-body">
+                                        <div class="product-name">
+                                            <p>名称：Sport飓风 Nike Kwazi 休闲运动鞋男 844839-002-001-100-400</p>
+                                        </div>
+                                        <div class="product-price">
+                                            价格：<span>￥888.88</span>
+                                            <del>￥999.88</del>
+                                        </div>
+                                        <div class="product-params">
+                                            <div class="product-size">
+                                                鞋码： <span>38</span>
+                                            </div>
+                                            <div class="product-num">
+                                                数量: x <span>1</span> 双
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        <!-- 图文列表 -->
+       
+    </main>
+
+    <section id="order">
+        <div class="orderMoney">
+            订单金额:￥  <span>0.00</span>
+        </div>
+        <div class="createOrder">
+            <button class="mui-btn mui-btn-danger" type="button">生成订单</button>
+        </div>
+    </section>
+
+
+    <!-- 公共的尾部 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-refresh"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- 模板引擎 -->
+    <script id="cartTpl" type="text/html">
+        {{each data value index}}
+        <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <!-- 左边 -->
+                    <div class="mui-pull-left">
+                        <img class="mui-media-object" src="{{value.pic[0].picAddr}}">
+                        <!-- 复选框 -->
+                        <div class="mui-input-row mui-checkbox">
+                            <input name="checkbox1" value="Item 1" type="checkbox">
+                        </div>
+                    </div>
+
+                    <!-- 右边 -->
+                    <div class="mui-media-body">
+                        <div class="product-name">
+                            <p>名称：{{value.proName}}</p>
+                        </div>
+                        <div class="product-price">
+                            价格：<span>￥{{value.price}}</span>
+                            <del>￥{{value.oldPrice}}</del>
+                        </div>
+                        <div class="product-params">
+                            <div class="product-size">
+                                鞋码： <span>{{value.size}}</span>
+                            </div>
+                            <div class="product-num">
+                                数量: x <span>{{value.num}}</span> 双
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+    </script>
+
+
+
+
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- zepto 移动端的jq,用法一样 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 最新版的模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <!-- 字体图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./less/search.css">
+    <link rel="stylesheet" href="./less/login.css">
 </head>
 
 <body>
@@ -21,45 +21,29 @@
             <a href="index.html" class="fa fa-arrow-left"></a>
         </div>
         <div class="center">
-            <h4>搜索中心</h4>
+            <h4>登陆中心</h4>
         </div>
         <div class="right">
-
+            <a href="index" class="fa fa-home"></a>
         </div>
     </header>
 
     <!-- 主体部分 -->
     <main id="main">
-        <div class="search-form">
-            <form action="#">
-                <input type="search" id="search-imp" placeholder="请输入要搜索的商品">
-                <button type="button" class="mui-btn mui-btn" id="search-btn">搜索</button>
-            </form>
-        </div>
-        
-        <div class="mui-card search-content">
-            <!--页眉，放置标题-->
-            <div class="mui-card-header">
-                <!-- 自动左右 -->
-                <span>搜索历史</span>
-                <a href="#" class="fa fa-trash btn-clear">清空记录</a>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户名</label>
+                <input type="text" class="mui-input-clear userName" placeholder="请输入用户名">
             </div>
-            <!--内容区-->
-            <div class="mui-card-content">
-                <!-- 滚动 -->
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <!--这里放置真实显示的DOM内容-->
-                        <ul class="mui-table-view">
-                            <li class="mui-table-view-cell">Item 1<span class="fa fa-close mui-badge btn-delete"></span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" class="mui-input-password password" placeholder="请输入密码">
             </div>
-
-        </div>
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary dengLu">登陆</button>
+                <button type="button" class="mui-btn mui-btn-danger zhuCe">免费注册</button>
+            </div>
+        </form>
     </main>
 
 
@@ -96,12 +80,6 @@
     </footer>
 
 
-    <script id="seachTpl" type="text/html">
-        {{each list value index}}
-        <li class="mui-table-view-cell">{{value}}<span class="fa fa-close mui-badge btn-delete" data-index="{{index}}"></span></li>
-        {{/each}}
-    </script>
-
 
 
 
@@ -111,7 +89,7 @@
     <script src="./lib/zepto/zepto.min.js"></script>
     <!-- 最新版的模板引擎 -->
     <script src="./lib/artTemplate/template-web.js"></script>
-    <script src="./js/search.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

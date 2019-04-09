@@ -1,0 +1,85 @@
+@import 'base.less';
+
+.ddff() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+};
+
+#header{
+    .left{
+        .ddff();
+        a{
+            &::before{
+                color: white;
+            }
+        }
+    }
+}
+
+#main{
+    .mui-scroll-wrapper{
+        position: relative;
+        height: 100%;
+    }
+    ul{
+        li{
+            &::after{
+                left: 0px;
+            }
+            a{
+                max-height: 157px;
+                .mui-pull-left{
+                    img{
+                        max-width: .8rem;
+                        height: .8rem;
+                    }
+                    .mui-checkbox{
+                        text-align: center;
+                        margin-top: .05rem;
+                        input{
+                            position: static;
+                            &::before{
+                                color: red;
+                                font-size: .2rem;
+                            }
+                        }
+                    }
+                }
+                .mui-media-body{
+                    line-height: .3rem;
+                    .product-name{
+                        line-height: .25rem;
+                        >p{
+                            white-space: normal;
+                        }
+                    }
+                    .product-price{
+                        span{
+                            color: red;
+                        }
+                        del{
+                            color: #ccc;
+                        }
+                    }
+                    .product-params{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#order{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    line-height: 33px;
+    .orderMoney{
+        margin-left: .2rem;
+        color: red;
+    }
+}

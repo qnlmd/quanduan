@@ -1,0 +1,98 @@
+@import './base.less';
+
+.ddff() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header{
+    position: relative;
+    .left{
+        .ddff();
+        a{
+            color: white;
+        }
+    }
+    .center{
+        h4{
+            font-weight: normal;
+        }
+    }
+}
+
+#main{
+    #pullrefresh{
+        background-color: white;
+        height: 100%;
+        position: relative;
+        .mui-scroll{
+            .search-form{
+                padding: 10px;
+                background-color: white;
+                form{
+                    height: .34rem;
+                    display: flex;
+                    input{
+                        flex: 1;
+                        height: .34rem;
+                        border-bottom-right-radius: 0px;
+                        border-top-right-radius: 0px;
+                        text-align: left;
+                        background-color: white;
+                        border: .01rem solid @main-color;
+                        font-size: .12rem;
+                    }
+                    button{
+                        height: .34rem;
+                        width: .6rem;
+                        background-color: @main-color;
+                        color: white;
+                        border-bottom-left-radius: 0px;
+                        border-top-left-radius: 0px;
+                    }
+                }
+            }
+            .product-list{
+                margin: 0px;
+                .product-list-header{
+                    background-color: #eee;
+                    a{
+                        font-size: .14rem;
+                        color:#666;
+                    }
+                }
+                .product-list-content{
+                    padding: 10px;
+                    .mui-row{
+                        >div{
+                            .prodcutBox{
+                                padding: 5px;
+                                a{
+                                    border: 1px solid #ccc;
+                                    display: block;
+                                    text-align: center;
+                                    img{
+                                        width: 100%;
+                                    }
+                                    .product-name{
+                                        margin-top: 5px;
+                                        line-height: 20px;
+                                        height: 40px;
+                                        overflow: hidden;
+                                    }
+                                    >button{
+                                        margin-top: 10px;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

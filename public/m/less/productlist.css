@@ -1,0 +1,156 @@
+html {
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+  line-height: .14rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+img {
+  vertical-align: middle;
+}
+#header {
+  background-color: #006699;
+  display: flex;
+  height: 45px;
+}
+#header .left {
+  height: .45rem;
+  width: .45rem;
+}
+#header .center {
+  flex: 1;
+}
+#header .center > h4 {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .right {
+  height: .45rem;
+  width: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .right a {
+  color: white;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+}
+#footer {
+  background-color: #006699;
+  height: 45px;
+}
+#footer > div > div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 45px;
+}
+#footer > div > div a i {
+  display: block;
+}
+#footer > div > div a span {
+  display: block;
+}
+#header {
+  position: relative;
+}
+#header .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .left a {
+  color: white;
+}
+#header .center h4 {
+  font-weight: normal;
+}
+#main #pullrefresh {
+  background-color: white;
+  height: 100%;
+  position: relative;
+}
+#main #pullrefresh .mui-scroll .search-form {
+  padding: 10px;
+  background-color: white;
+}
+#main #pullrefresh .mui-scroll .search-form form {
+  height: .34rem;
+  display: flex;
+}
+#main #pullrefresh .mui-scroll .search-form form input {
+  flex: 1;
+  height: .34rem;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  text-align: left;
+  background-color: white;
+  border: 0.01rem solid #006699;
+  font-size: .12rem;
+}
+#main #pullrefresh .mui-scroll .search-form form button {
+  height: .34rem;
+  width: .6rem;
+  background-color: #006699;
+  color: white;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+#main #pullrefresh .mui-scroll .product-list {
+  margin: 0px;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-header {
+  background-color: #eee;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-header a {
+  font-size: .14rem;
+  color: #666;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-content {
+  padding: 10px;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-content .mui-row > div .prodcutBox {
+  padding: 5px;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-content .mui-row > div .prodcutBox a {
+  border: 1px solid #ccc;
+  display: block;
+  text-align: center;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-content .mui-row > div .prodcutBox a img {
+  width: 100%;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-content .mui-row > div .prodcutBox a .product-name {
+  margin-top: 5px;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+}
+#main #pullrefresh .mui-scroll .product-list .product-list-content .mui-row > div .prodcutBox a > button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
